@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
   <title>COLOR</title>
 </head>
 
@@ -18,8 +18,7 @@
       <span class="yellow">O</span>
       <span class="blue">R</span>
     </h1>
-    <a href="top.html">RANKING</a>
-    <a href="login.html">LOGIN</a>
+    <a href="index.html">HOME</a>
     <div class="score">
       <div id="timer" class="clock">00:00</div>
       <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" alt="trophy">
@@ -28,20 +27,19 @@
   </header>
 
   <main>
-    <div class="box">
-      <h1 id="color-text"></h1>
 
-      <div>
-        <button id="correct-btn" class="button correctBtn">✔</button>
-        <button id="incorrect-btn" class="button incorrectBtn">X</button>
-      </div>
+    <div class="box">
+      <h1>LOGIN</h1>
+      <form>
+        <label for="nickname">Nickname:</label>
+        <input type="text" id="nickname" name="nickname"><br><br>
+        <input type="submit" id="login-button" value="Sign In">
+      </form>
     </div>
 
   </main>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/alerts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/login.js"></script>
 </body>
 
 </html>

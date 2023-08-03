@@ -39,6 +39,11 @@ header .logo .blue {
     color: #187498;
 }
 
+header a {
+    text-decoration: none;
+    color: #cccccc;
+}
+
 header .score {
     display: flex;
     align-items: center;
@@ -62,10 +67,9 @@ main {
     align-items: center;
 }
 
-main .box {
+.box {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 400px;
     height: 400px;
@@ -73,24 +77,14 @@ main .box {
     border: 1px #cccccc solid;
 }
 
-main .box h1 {
-    font-size: 70px;
+.box h1 {
+    padding: 10px 0;
 }
 
-main .box .button {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    font-size: 30px;
-    color: #ffffff;
-    border-radius: 50%;
-    border: none;
-}
-
-main .box .correctBtn {
-    background-color: #36AE7C;
-}
-
-main .box .incorrectBtn {
-    background-color: #EB5353;
+.box form {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    border: 1px #cccccc solid;
 }

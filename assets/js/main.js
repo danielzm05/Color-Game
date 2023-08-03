@@ -5,8 +5,8 @@ const incorrectBtn = document.getElementById('incorrect-btn');
 const textColor = document.getElementById('color-text');
 
 //Audio
-let correctSound = new Audio('effects/Correct.mp3')
-let incorrectSound = new Audio('effects/Incorrect.mp3')
+let correctSound = new Audio('assets/effects/Correct.mp3')
+let incorrectSound = new Audio('assets/effects/Incorrect.mp3')
 
 //Arrays con las posibles opciones de color
 const text = ["ROJO", "AMARILLO", "VERDE", "AZUL", "NARANJA", "VIOLETA", "ROSA", "MARRÓN", "NEGRO"];
