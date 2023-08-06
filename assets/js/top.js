@@ -5,13 +5,15 @@ updateRanking()
 
 
 function updateRanking() {
+    let i = 1;
+
     playersList.forEach((player) => {
         // Crear celda
         let newCell = document.createElement('div');
         newCell.classList.add('cell');
         newCell.innerHTML = `
             <div class="player">
-            <p class="top-number">${player.topNumber}</p>
+            <p class="top-number">${i++}</p>
             <p class="name">${player.nickname}</p>
             </div>
             <div class="score">

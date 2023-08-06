@@ -106,3 +106,7 @@ main {
   justify-content: space-between;
   width: 30%;
 }
+
+.box .ranking .cell .time {
+  color: #929292
+}

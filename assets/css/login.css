@@ -67,24 +67,56 @@ main {
     align-items: center;
 }
 
-.box {
+/*STATS BOX*/
+.stats-box {
     display: flex;
-    align-items: center;
     flex-direction: column;
     width: 400px;
     height: 400px;
+    padding: 0 40px;
     border-radius: 15px;
     border: 1px #cccccc solid;
+    font-size: 20px;
 }
 
-.box h1 {
+.stats-box .stats{
+padding: 20px 0;
+}
+
+.stats-box .stats p img {
+    height: 20px;
+    margin: 0 5px;
+}
+
+.stats-box h1 {
+    text-align: center;
     padding: 10px 0;
 }
 
-.box form {
+.stats-box form {
     width: 100%;
-    padding: 20px 60px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    border: 1px #cccccc solid;
+}
+
+.stats-box form input[type="text"]{
+    outline: none;
+    border: none;
+    padding: 5px 0;
+    margin: 20px 0 0 0;
+    color: #cccccc;
+    font-size: 20px;
+    border-bottom: 1px #cccccc solid;
+}
+
+.stats-box form input[type="submit"]{
+    width: 150px;
+    height: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #36AE7C;
 }
