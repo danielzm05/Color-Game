@@ -98,15 +98,15 @@ function ShowStats() {
   const statsBox = document.createElement("div");
   statsBox.classList.add('stats-box');
   statsBox.innerHTML = `
-    <h1>STATS</h1>
+    <h1>PERDISTE</h1>
     <div class="stats">
-      <p id="player-points"><img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" alt="trophy">POINTS: ${score.innerText}</p>
-      <p id="player-time"><img src="https://cdn-icons-png.flaticon.com/512/3003/3003126.png" alt="timer">TIME: ${timer.innerText}</p>
+      <p id="player-points"><img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" alt="trophy">PUNTOS: ${score.innerText}</p>
+      <p id="player-time"><img src="https://cdn-icons-png.flaticon.com/512/3003/3003126.png" alt="timer">TIEMPO: ${timer.innerText}</p>
     </div>
     <form>
       <label for="nickname">NICKNAME:</label>
       <input type="text" id="nickname" name="nickname">
-      <input type="submit" id="login-button" value="SIGN IN">
+      <input type="submit" id="login-button" value="GUARDAR">
     </form>
   `
   centerBox.appendChild(statsBox)
@@ -134,7 +134,7 @@ function ShowStats() {
       localStorage.setItem("playersList", JSON.stringify(playersList));
 
       //Cambio a la pagina principal
-      window.location.href = "../top.html";
+      window.location.href = "./top.html";
 
     } else {
       alert('Por favor ingresa un nickname');
