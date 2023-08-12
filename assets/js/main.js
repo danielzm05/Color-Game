@@ -25,25 +25,30 @@ document.addEventListener('keydown', function (event) {
   if (event.code == 'ArrowLeft') {
 
     correctBtn.style.backgroundColor = '#226E4E'
+
     if (indexes[0] == indexes[1]) {
-      updateCounter()
+      correctAnswer()
+
     } else if (indexes[0] != indexes[1]) {
-      resetCounter()
+      document.removeEventListener("keydown", arguments.callee);
+      incorrectAnswer()
     }
 
   } else if (event.code == 'ArrowRight') {
 
     incorrectBtn.style.backgroundColor = '#AB3C3C'
+
     if (indexes[0] != indexes[1]) {
-      updateCounter()
+      correctAnswer()
 
     } else if (indexes[0] == indexes[1]) {
-      resetCounter()
+      document.removeEventListener("keydown", arguments.callee);
+      incorrectAnswer()
     }
   }
 });
 
-//Evento para volver al color original cuando suelte la tecla
+//Evento para volver al color original de los botones cuando suelte la tecla
 document.addEventListener('keyup', function (event) {
   if (event.code == 'ArrowRight' || event.code == 'ArrowLeft') {
     correctBtn.style.backgroundColor = ''
@@ -64,19 +69,20 @@ function generateColor() {
 
 
 //Función para actualizar el contador
-function updateCounter() {
+function correctAnswer() {
   if (count == 0) {
     startTimer();
   }
   correctSound.play();
+  correctCircle.play()
   count++
   score.innerText = count
   indexes = generateColor();
 }
 
-function resetCounter() {
+function incorrectAnswer() {
   incorrectSound.play();
-
+  incorrectCircle.play()
   ShowStats();
   clearInterval(interval);
 }

@@ -10,6 +10,7 @@
 body {
   background-color: #ffffff;
   color: #333333;
+  overflow: hidden;
 }
 
 /* HEADER_______________________________ */
@@ -19,7 +20,9 @@ header {
   display: flex;
   padding: 10px 20px;
   align-items: center;
+  position: absolute;
   justify-content: space-between;
+  background-color: #ffffff;
   border-bottom: 1px #cccccc solid;
 }
 
@@ -61,7 +64,7 @@ header .score .clock {
 
 /* CONTENT_______________________________ */
 main {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,9 +76,11 @@ main .box {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: absolute;
   width: 400px;
   min-height: 400px;
   border-radius: 15px;
+  background-color: #ffffff;
   border: 1px #cccccc solid;
 }
 
@@ -101,6 +106,10 @@ main .box .incorrectBtn {
   background-color: #EB5353;
 }
 
+main #bouncyCircle {
+  height: 100%;
+}
+
 /*STATS BOX*/
 .center {
   position: fixed;
@@ -122,8 +131,8 @@ main .box .incorrectBtn {
   font-size: 20px;
 }
 
-.stats-box .stats{
-padding: 20px 0;
+.stats-box .stats {
+  padding: 20px 0;
 }
 
 .stats-box .stats p img {
@@ -143,7 +152,7 @@ padding: 20px 0;
   flex-direction: column;
 }
 
-.stats-box form input[type="text"]{
+.stats-box form input[type="text"] {
   outline: none;
   border: none;
   padding: 5px 0;
@@ -153,7 +162,7 @@ padding: 20px 0;
   border-bottom: 1px #cccccc solid;
 }
 
-.stats-box form input[type="submit"]{
+.stats-box form input[type="submit"] {
   width: 150px;
   height: 30px;
   margin: 20px 0;
